@@ -1,0 +1,17 @@
+
+;; ----- smex-history -----
+(
+ search-forward
+ load-theme
+ cd
+ 5x5
+ arp
+ dbx
+ dig
+)
+
+;; ----- smex-data -----
+(
+ (load-theme . 16)
+ (search-forward . 1)
+)

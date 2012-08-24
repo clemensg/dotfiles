@@ -1,0 +1,14 @@
+#!/bin/sh
+# Clemens Gruber, 2012
+# Set up symbolic links to dotfile dirs
+
+# Emacs
+ln -s $(pwd)/emacs $HOME/.emacs.d
+
+# ZSH
+ln -s $(pwd)/zsh/zshrc $HOME/.zshrc
+ln -s $(pwd)/zsh/zshenv $HOME/.zshenv
+ln -s $(pwd)/zsh/zlogin $HOME/.zlogin
+
+# Other tools
+#ln -s $(pwd)/tools/
