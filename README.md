@@ -1,4 +1,5 @@
 dotfiles
 ========
 
-my config files
+* emacs
+* zsh
