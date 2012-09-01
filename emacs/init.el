@@ -1,22 +1,15 @@
-;;; Package archive for Emacs Lisp
-;(require 'package)
-;(add-to-list 'package-archives 
-;    '("marmalade" .
-;      "http://marmalade-repo.org/packages/"))
-;(package-initialize)
+;; init.el
+;; Emacs config
+;; Clemens Gruber, 2012
 
-;; Use Emacs Starter Kit as default
-;(when (not package-archive-contents)
-;  (package-refresh-contents))
-;(defvar my-packages '(starter-kit starter-kit-ruby)  ; starter-kit-ruby starter-kit-lisp starter-kit-bindings
-;  "A list of packages to ensure are installed at launch.")
-;(dolist (p my-packages)
-;  (when (not (package-installed-p p))
-;    (package-install p)))
-
+;;; Styling
 (load-theme 'adwaita t)
 
-;; Dont clobber my directories with ugly .~ backup files
+;; Keybindings
+;;; Autocompletion
+(global-set-key "\M- " 'hippie-expand)
+
+;; Dont clobber my directories with ugly backup files
 (setq
    backup-by-copying t      ; don't clobber symlinks
    backup-directory-alist
@@ -37,15 +30,13 @@
       (message "%s" file)
       (delete-file file))))
 
+;; Haskell-Mode
+(load "~/.emacs.d/haskell-mode/haskell-site-file")
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+
+;; Added by emacs automatically
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(safe-local-variable-values (quote ((encoding . utf-8) (whitespace-line-column . 80) (lexical-binding . t)))))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  )
