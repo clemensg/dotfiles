@@ -2,3 +2,5 @@ emacs/backups/**
 emacs/auto-save-list/**
 emacs/places
 emacs/slime/CVS/**
+emacs/.smex-items
+emacs/tramp
