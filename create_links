@@ -4,11 +4,9 @@
 
 # ZSH
 ln -s $(pwd)/zsh/zshrc $HOME/.zshrc
-ln -s $(pwd)/zsh/zshenv $HOME/.zshenv
-ln -s $(pwd)/zsh/zlogin $HOME/.zlogin
 
 # Emacs
-ln -s $(pwd)/emacs $HOME/.emacs.d
+ln -s $(pwd)/emacs/ $HOME/.emacs.d
 
 # Vim
 ln -s $(pwd)/vimrc $HOME/.vimrc

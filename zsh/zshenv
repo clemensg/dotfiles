@@ -1,4 +1,0 @@
-# zshenv
-
-export PATH=/usr/local/bin:$PATH
-export EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"

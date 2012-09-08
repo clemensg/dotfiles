@@ -1,3 +1,4 @@
 emacs/backups/**
 emacs/auto-save-list/**
 emacs/places
+emacs/slime/CVS/**
