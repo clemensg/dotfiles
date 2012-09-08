@@ -13,3 +13,9 @@
 [submodule "emacs/plugins/flymake-ruby"]
 	path = emacs/plugins/flymake-ruby
 	url = git://github.com/purcell/flymake-ruby.git
+[submodule "emacs/themes/solarized"]
+	path = emacs/themes/solarized
+	url = git://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git

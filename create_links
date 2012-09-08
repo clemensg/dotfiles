@@ -9,4 +9,5 @@ ln -s $(pwd)/zsh/zshrc $HOME/.zshrc
 ln -s $(pwd)/emacs/ $HOME/.emacs.d
 
 # Vim
+ln -s $(pwd)/vim $HOME/.vim
 ln -s $(pwd)/vimrc $HOME/.vimrc
