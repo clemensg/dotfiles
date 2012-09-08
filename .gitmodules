@@ -1,6 +1,3 @@
-[submodule "emacs/haskell-mode"]
-	path = emacs/haskell-mode
-	url = git://github.com/haskell/haskell-mode.git
 [submodule "emacs/plugins/yasnippet"]
 	path = emacs/plugins/yasnippet
 	url = https://github.com/capitaomorte/yasnippet
