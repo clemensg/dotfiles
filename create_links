@@ -1,9 +1,9 @@
 #!/bin/sh
-# Clemens Gruber, 2012
+# Clemens Gruber, 2013
 # Set up symbolic links to dotfile dirs
 
 # ZSH
-ln -s $(pwd)/zsh/zshrc $HOME/.zshrc
+ln -s $(pwd)/zshrc $HOME/.zshrc
 
 # Emacs
 ln -s $(pwd)/emacs/ $HOME/.emacs.d

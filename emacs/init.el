@@ -1,24 +1,20 @@
-;; -*- coding: utf-8 -*-
-;; Emacs config
-;; Clemens Gruber, 2012
+; Emacs settings
+; Clemens Gruber, 2013
+;
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
+; Basic settings
+(setq
+   backup-by-copying t            ; don't clobber symlinks
+   backup-directory-alist
+    '(("." . "~/.emacs.d/saves")) ; don't litter my fs tree
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)             ; use versioned backups
 
-;; General
-(require 'init-backup)
-(require 'init-keys)
-(require 'init-snippets)
-(require 'init-style)
-
-;; Programming languages
-(require 'init-ruby)
-;(require 'init-lisp)
-;(require 'init-haskell)
-
-(require 'init-misc)
-
-;; The following is added by Emacs automatically
-(custom-set-variables
- '(safe-local-variable-values (quote ((encoding . utf-8) (whitespace-line-column . 80) (lexical-binding . t)))))
-(custom-set-faces
- )
+; Package manager
+(require 'package)
+(add-to-list 'package-archives 
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(package-initialize)
