@@ -1,6 +1,11 @@
 emacs/backups/**
+emacs/saves/**
 emacs/auto-save-list/**
 emacs/places
-emacs/slime/CVS/**
-emacs/.smex-items
 emacs/tramp
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
