@@ -3,10 +3,11 @@
 # Set up symbolic links to dotfile dirs
 
 # ZSH
-ln -s $(pwd)/zshrc $HOME/.zshrc
+ln -s $(pwd)/zsh/zshrc $HOME/.zshrc
 
 # Emacs
-ln -s $(pwd)/emacs/ $HOME/.emacs.d
+ln -s $(pwd)/emacs $HOME/.emacs.d
+mkdir $HOME/.emacs.d/saves
 
 # Vim
 ln -s $(pwd)/vim $HOME/.vim
