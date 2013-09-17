@@ -1,25 +1,20 @@
-" VIM config
-" Clemens Gruber, 2012
-"
-
-" Easy runtimepath management
+" Runtimepath manager
 call pathogen#infect()
 
-" UTF-8
-set enc=utf-8
-set fenc=utf-8
-set termencoding=utf-8
-
-" Tabs vs Spaces
-set tabstop=4
-set shiftwidth=4
-set expandtab
-
-" Other settings
-syntax enable
+syntax on
 filetype plugin indent on
 
-" Theme
-set background=light
-colorscheme solarized
+" 4 spaces instead of tab
+set sw=4 sts=4 et
 
+if has('gui_running')
+    set gcr=n:blinkon0
+    set lines=30
+    " Show the cursor line and column number
+    set ruler
+    " Colors
+    set background=light
+    colorscheme solarized
+    " Font
+    set guifont=Source_Code_Pro:h16
+endif
