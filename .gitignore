@@ -1,5 +1,7 @@
+emacs/elpa
 emacs/backups/**
 emacs/saves/**
+emacs/saved-places
 emacs/auto-save-list/**
 emacs/places
 emacs/tramp
