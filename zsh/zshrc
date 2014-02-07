@@ -23,9 +23,13 @@ export UPDATE_ZSH_DAYS=6
 # yyyy-mm-dd
 HIST_STAMPS="dd.mm.yyyy"
 
+# zsh tmux plugin config
+ZSH_TMUX_AUTOSTART=false
+ZSH_TMUX_ITERM2=false
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git bundler)
+plugins=(git bundler tmux)
 # Contains only platform-independent plugins, platform-dependent plugins are added below
 
 DOTFILES=$HOME/dotfiles

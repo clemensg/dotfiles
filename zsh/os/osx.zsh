@@ -1,11 +1,11 @@
 # Mac OS X specific zsh configuration
 #
 
-# Homebrew
-if [[ -d "$HOME/homebrew" ]]; then
-  export HOMEBREW_DEVELOPER=1
-  export HOMEBREW_PREFIX=$HOME/homebrew
-fi
+# Homebrew developer
+#if [[ -d "$HOME/homebrew" ]]; then
+#  export HOMEBREW_DEVELOPER=1
+#  export HOMEBREW_PREFIX=$HOME/homebrew
+#fi
 
 # Homebrewed Postgres aliases
 alias start_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
@@ -17,5 +17,5 @@ if [[ ! -n $SSH_CONNECTION ]]; then
 fi
 
 # Oh-my-Zsh plugins
-#plugins+=(osx bla blub)
+#plugins+=(osx brew xcode)
 plugins+=(osx)

@@ -13,7 +13,7 @@ upgrade
 #install git
 
 # Install other useful binaries
-# ...
+install tmux
 
 #tap homebrew/versions
 
