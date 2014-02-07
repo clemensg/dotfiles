@@ -15,3 +15,7 @@ alias stop_postgres="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 if [[ ! -n $SSH_CONNECTION ]]; then
   export VIM='mvim'
 fi
+
+# Oh-my-Zsh plugins
+#plugins+=(osx bla blub)
+plugins+=(osx)

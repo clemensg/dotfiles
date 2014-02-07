@@ -22,14 +22,22 @@ export UPDATE_ZSH_DAYS=6
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 HIST_STAMPS="dd.mm.yyyy"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git bundler)
+# Contains only platform-independent plugins, platform-dependent plugins are added below
 
-source $ZSH/oh-my-zsh.sh
-
-# Custom configuration
 DOTFILES=$HOME/dotfiles
+
+# Detect platform
+source $DOTFILES/zsh/os.zsh
+# Load platform-specific configurations (and oh-my-zsh plugins!)
+[[ -s "$DOTFILES/zsh/os/$PLATFORM.zsh" ]] && source "$DOTFILES/zsh/os/$PLATFORM.zsh"
+typeset -U plugins
+
+# Load oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 # Cocoapods needs LC_CTYPE to be set
 export LC_CTYPE="en_US.UTF-8"
@@ -41,11 +49,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 if [[ -d "$HOME/.rvm" ]]; then
   PATH=$PATH:$HOME/.rvm/bin
 fi
-
-# Detect platform
-source $DOTFILES/zsh/os-detect.zsh
-# Load platform-specific configurations
-[[ -s "$DOTFILES/zsh/os/$PLATFORM.zsh" ]] && source "$DOTFILES/zsh/os/$PLATFORM.zsh"
 
 # Set $EMACS variable to launch emacsclient with a daemon
 source $DOTFILES/zsh/emacsclient.zsh
