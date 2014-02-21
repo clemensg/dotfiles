@@ -46,7 +46,7 @@ source $ZSH/oh-my-zsh.sh
 # Cocoapods needs LC_CTYPE to be set
 export LC_CTYPE="en_US.UTF-8"
 # Homebrew: PATH and MANPATH
-export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:$MANPATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # RVM
@@ -70,5 +70,9 @@ alias vim='echo "Hey! Next time, type v instead of vim"; $VIM'
 export EDITOR=$EMACS
 #export EDITOR=$VIM
 
-# Remove duplicates from PATH
+# Git soll MacVim im Konsolenmodus nehmen
+export GIT_EDITOR=mvimc
+
+# Remove duplicates from PATH, etc.
 typeset -U PATH
+typeset -U MANPATH
