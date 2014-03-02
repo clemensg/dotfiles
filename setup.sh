@@ -12,8 +12,9 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 # Brewfile
 brew bundle $(pwd)/Brewfile
 
-# Git config (interactive)
-source $(pwd)/pim/git.zsh
+# Global Git config. Local configs are used in project directories!
+git config --global user.name "Clemens Gruber"
+git config --global user.email clemensgru@gmail.com
 
 # Install RVM
 curl -L https://get.rvm.io | bash -s stable
@@ -25,7 +26,7 @@ ln -s $(pwd)/zsh/zshrc $HOME/.zshrc
 ln -s $(pwd)/emacs $HOME/.emacs.d
 mkdir $HOME/.emacs.d/saves
 
-# Vim
+# Vim / Macvim?
 ln -s $(pwd)/vimrc $HOME/.vimrc
 mkdir -p $HOME/.vim/bundle
 git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim

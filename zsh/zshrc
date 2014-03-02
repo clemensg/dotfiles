@@ -38,7 +38,13 @@ DOTFILES=$HOME/dotfiles
 source $DOTFILES/zsh/os.zsh
 # Load platform-specific configurations (and oh-my-zsh plugins!)
 [[ -s "$DOTFILES/zsh/os/$PLATFORM.zsh" ]] && source "$DOTFILES/zsh/os/$PLATFORM.zsh"
+
+# Add zsh-syntax-highlighting and remove duplicates
+plugins+=(zsh-syntax-highlighting)
 typeset -U plugins
+
+# Needs https://github.com/zsh-users/zsh-syntax-highlighting/
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -72,6 +78,11 @@ export EDITOR=$EMACS
 
 # Git soll MacVim im Konsolenmodus nehmen
 export GIT_EDITOR=mvimc
+
+# Use git with openssl and curl-ca-bundle
+# For now, I don't trust SecureTransport..
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+export GIT_SSL_CAINFO=$SSL_CERT_FILE
 
 # Remove duplicates from PATH, etc.
 typeset -U PATH
