@@ -7,15 +7,11 @@
 #  export HOMEBREW_PREFIX=$HOME/homebrew
 #fi
 
-# Homebrewed Postgres aliases
-alias start_postgres="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias stop_postgres="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
 # Prefer MacVim (for local sessions)
 if [[ ! -n $SSH_CONNECTION ]]; then
-  export VIM='mvim'
+  export VIM='/usr/local/bin/mvim'
+  export GIT_EDITOR='/usr/local/bin/vim'
 fi
 
 # Oh-my-Zsh plugins
-#plugins+=(osx brew xcode)
-plugins+=(osx)
+plugins+=(osx brew pod postgres)

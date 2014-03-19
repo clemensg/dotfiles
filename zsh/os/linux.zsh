@@ -1,8 +1,13 @@
 # Linux specific config
 
-## ArchLinux
-#plugins+=(archlinux kate systemd)
-plugins+=(kate systemd)
+if which gvim >/dev/null; then
+   export VIM=gvim
+fi
 
-## Debian-based distros
-#plugins+=(debian)
+if [[ -f /etc/debian_version ]]; then
+   # Debian
+   plugins+=(debian sudo)
+else
+   # ArchLinux
+   plugins+=(archlinux kate sudo systemd)
+fi
