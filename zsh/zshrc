@@ -77,3 +77,6 @@ export PATH=$HOME/Library/Haskell/bin:$PATH
 # Remove duplicates from PATH, etc.
 typeset -U PATH
 typeset -U MANPATH
+
+## direnv (adds ./bin/ dir to PATH, e.g. in rails project dirs)
+# eval "$(direnv hook zsh)"
