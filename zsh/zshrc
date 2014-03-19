@@ -63,11 +63,6 @@ alias vim='echo "Hey, why not type v instead of vim?"; $VIM'
 #export EDITOR=$EMACS
 export EDITOR=$VIM
 
-# Use git with openssl and curl-ca-bundle
-# For now, I don't trust SecureTransport..
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-export GIT_SSL_CAINFO=$SSL_CERT_FILE
-
 # Use FredKSchott's color git log from fredkschott.com/post/2014/02/git-log-is-so-2005/
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
