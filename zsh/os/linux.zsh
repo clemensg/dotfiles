@@ -1,8 +1,8 @@
 # Linux specific config
 
-if which gvim >/dev/null; then
-   export VIM=gvim
-fi
+#if which gvim >/dev/null; then
+#   export VIM=gvim
+#fi
 
 if [[ -f /etc/debian_version ]]; then
    # Debian
