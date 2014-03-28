@@ -11,3 +11,5 @@ emacs/tramp
 ._*
 .Spotlight-V100
 .Trashes
+*.elc
+
