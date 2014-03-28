@@ -1,6 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 # Clemens Gruber, 2014
-#
 # Initial setup
 #
 
