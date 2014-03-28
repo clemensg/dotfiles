@@ -6,7 +6,7 @@
 
 ;;; Nota bene:
 ;;;  No need to call (server-start)
-;;;  Server setup takes place elsewhere (e.g. function e in .zshrc)
+;;;  Server setup takes place elsewhere (zsh)
 
 ;; Package management
 (require 'package)

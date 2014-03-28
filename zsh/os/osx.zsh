@@ -9,8 +9,9 @@
 
 # Prefer MacVim (for local sessions)
 if [[ ! -n $SSH_CONNECTION ]]; then
-  export VIM='/usr/local/bin/mvim'
-  export GIT_EDITOR='/usr/local/bin/vim'
+  export VIM='/usr/local/bin/vim'
+  export MVIM='/usr/local/bin/mvim'
+  export GIT_EDITOR=$VIM
 fi
 
 # Oh-my-Zsh plugins

@@ -31,12 +31,14 @@ syntax on
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
-" Color scheme
-set background=dark
-colorscheme solarized
+if has("gui_running")
+   " Color scheme
+   set background=dark
+   colorscheme solarized
 
-" Font
-set guifont=Source\ Code\ Pro:h18
+   " Font
+   set guifont=Source\ Code\ Pro:h18
+endif
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.

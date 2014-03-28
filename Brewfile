@@ -5,6 +5,9 @@
 # Make sure we’re using the latest Homebrew
 update
 
+# An apple a day keeps the doctor away
+doctor
+
 # Upgrade any already-installed formulae
 upgrade
 
@@ -19,10 +22,16 @@ install zsh
 install emacs --cocoa
 install macvim
 # Utilities
+install heroku-toolbelt
+install picocom
+install pv
 install ssh-copy-id
+install subversion --with-brewed-openssl
 install tmux
 # Server daemons
 install postgresql
+# Libraries
+install libyaml
 
 # Link e.g. MacVim.app to /Applications
 linkapps

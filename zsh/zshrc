@@ -59,9 +59,11 @@ alias dr="$DOTFILES/scripts/daily_routine.sh"
 alias emacs='echo "Hey, why not type e instead of emacs?"; $EMACS'
 alias vim='echo "Hey, why not type v instead of vim?"; $VIM'
 
-# Finally set favorite editor
-#export EDITOR=$EMACS
-export EDITOR=$VIM
+## Default editor ##
+# MacVim terminal
+#export EDITOR=$VIM
+# MacVim GUI
+export EDITOR=$MVIM
 
 # Use FredKSchott's color git log from fredkschott.com/post/2014/02/git-log-is-so-2005/
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
