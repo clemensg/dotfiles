@@ -7,11 +7,14 @@
 #  export HOMEBREW_PREFIX=$HOME/homebrew
 #fi
 
-# Prefer MacVim (for local sessions)
 if [[ ! -n $SSH_CONNECTION ]]; then
+  # Prefer GUI MacVim for local sessions
+  export VIM='/usr/local/bin/mvim'
+  # Use terminal MacVim as git editor
+  export GIT_EDITOR='/usr/local/bin/vim'
+else
+  # Use terminal MacVim when logged in via ssh
   export VIM='/usr/local/bin/vim'
-  export MVIM='/usr/local/bin/mvim'
-  export GIT_EDITOR=$VIM
 fi
 
 # Oh-my-Zsh plugins
