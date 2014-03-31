@@ -4,6 +4,8 @@
 #   export VIM=gvim
 #fi
 
+export VIMRUNTIME=/usr/share/vim
+
 if [[ -f /etc/debian_version ]]; then
    # Debian
    plugins+=(debian sudo)
