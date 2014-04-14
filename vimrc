@@ -1,6 +1,8 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+set noswapfile
+set backupdir=~/.vim/backup,.,/tmp
 
 " NeoBundle (Vim plugin manager, a Vundle Fork)
 set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -25,6 +27,9 @@ NeoBundle 'slim-template/vim-slim.git'
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
 
+"set ruler
+"set cursorline
+
 " Switch syntax highlighting on
 syntax on
 
@@ -35,11 +40,24 @@ if has("gui_running")
    " Color scheme
    set background=dark
    colorscheme solarized
+   "let g:solarized_termtrans = 1
 
    " Font
    set guifont=Source\ Code\ Pro:h18
 endif
 
+"autocmd filetype python set expandtab
+
+set history=1000
+set undolevels=1000
+set wildignore=*.swp,*.bak,*.out
+
+" No tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
+

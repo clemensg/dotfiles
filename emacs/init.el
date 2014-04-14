@@ -15,7 +15,7 @@
 (package-initialize)
 ;; My packages
 (setq my-required-packages
-      (list 'flycheck 'inf-ruby 'rvm 'solarized-theme))
+      (list 'inf-ruby 'magit 'rvm 'solarized-theme))
 (dolist (package my-required-packages)
   (when (not (package-installed-p package))
     (package-refresh-contents)
@@ -28,9 +28,9 @@
 
 ;; Better defaults (github.com/technomancy/betterdefaults)
 (progn
-  ;; Ido-mode (?)
-  ;(ido-mode t)
-  ;(setq ido-enable-flex-matching t)
+  ;; Ido-mode: Interactively do (things)
+  (ido-mode t)
+  (setq ido-enable-flex-matching t)
 
   ;; Disable Toolbar and Scrollbar (no use in terminals)
   (menu-bar-mode -1)
@@ -88,16 +88,24 @@
 
 ;; Ruby stuff
 ;;  rvm.el
+(require 'rvm)
+(rvm-use-default)
 (add-hook 'ruby-mode-hook
           (lambda () (rvm-activate-corresponding-ruby)))
-;; flycheck
-(add-hook 'ruby-mode-hook
-	  (lambda () (flycheck-mode)))
-;;  ruby-refactor minor mode
+;;  ruby-mode filetypes
+(add-to-list 'auto-mode-alist
+             '("\\.\\(?:gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist
+             '("\\(Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
+
+;;  flycheck
+;(add-hook 'ruby-mode-hook
+;	  (lambda () (flycheck-mode)))
+;;   ruby-refactor minor mode
 ;;(add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
 
 ;; inf-ruby (irb inside emacs)
-(inf-ruby-switch-setup)
+(add-hook 'after-init-hook 'inf-ruby-switch-setup)
 
 ;; Disable SCSS auto compiling
 (setq scss-compile-at-save nil)

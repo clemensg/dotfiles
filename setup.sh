@@ -27,7 +27,7 @@ mkdir $HOME/.emacs.d/saves
 
 # Vim / Macvim?
 ln -s $(pwd)/vimrc $HOME/.vimrc
-mkdir -p $HOME/.vim/bundle
+mkdir -p $HOME/.vim/bundle $HOME/.vim/backup
 git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
 
 popd
