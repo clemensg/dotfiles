@@ -11,11 +11,11 @@ doctor
 # Upgrade any already-installed formulae
 upgrade
 
-# Git with dependencies
+# OpenSSL
 install openssl
-install curl --with-openssl
-install curl-ca-bundle
-install git --with-brewed-openssl --with-brewed-curl
+# Git with dependencies
+install curl #--with-openssl
+install git --with-brewed-curl #--with-brewed-openssl
 # Zsh
 install zsh
 # Two good friends :)

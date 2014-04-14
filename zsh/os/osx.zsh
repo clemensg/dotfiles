@@ -20,7 +20,5 @@ fi
 # Oh-my-Zsh plugins
 plugins+=(osx brew pod postgres)
 
-# Use git with openssl and curl-ca-bundle
-# For now, I don't trust SecureTransport..
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-export GIT_SSL_CAINFO=$SSL_CERT_FILE
+# Haskell platform
+export PATH=$HOME/Library/Haskell/bin:$PATH

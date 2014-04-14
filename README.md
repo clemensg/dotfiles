@@ -1,11 +1,10 @@
-dotfiles
-========
+## Config files
 
-* configs
- * emacs (marmalade+nobackupclutter)
- * vim (neobundle+solarized)
- * zsh (oh-my-zsh)
-* setup
- * homebrew
- * git
-* more or less platform-independent
+* Emacs (marmalade+nobackupclutter)
+* Git
+* Homebrew
+* Vim (neobundle+solarized)
+* ZSH (oh-my-zsh+custom-osx-linux-stuff)
+
+
+Works on Linux and Mac OS X.
