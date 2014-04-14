@@ -11,9 +11,9 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 # Brewfile
 brew bundle $(pwd)/Brewfile
 
-# Global Git config. Local configs are used in project directories!
-git config --global user.name "Clemens Gruber"
-git config --global user.email clemensgru@gmail.com
+# Git
+ln -s $(pwd)/git/config $HOME/.gitconfig
+ln -s $(pwd)/git/ignore $HOME/.gitignore
 
 # Install RVM
 curl -L https://get.rvm.io | bash -s stable

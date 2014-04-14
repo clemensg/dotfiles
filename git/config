@@ -1,0 +1,43 @@
+# .gitconfig
+# Clemens Gruber, 2014
+#
+
+[user]
+  name = Clemens Gruber
+  email = clemensgru@gmail.com
+
+[core]
+  excludesfile = ~/.gitignore
+  #editor = vim
+
+[credential]
+  helper = osxkeychain
+
+[alias]
+  co = checkout
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+[color]
+  ui = true
+  diff = auto
+  status = auto
+  branch = auto
+
+[push]
+  default = simple
+  # simple will soon be the default mechanism (in Git 2.0)
+
+[help]
+  autocorrect = 1
+
+[hub]
+  protocol = https
+
+#[apply]
+#  whitespace = nowarn
+
+#[mergetool]
+#  keepBackup = false
+
+#[difftool]
+#  prompt = false
