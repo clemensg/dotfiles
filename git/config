@@ -26,7 +26,7 @@
   pom = push origin master
   b = branch
   dh1 = diff HEAD~1
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 
   # Goodness (summary of diff lines added/removed/total)
   gn = !~/bin/git-goodness
