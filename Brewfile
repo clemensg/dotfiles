@@ -22,7 +22,8 @@ install zsh
 install emacs --cocoa
 install macvim
 # Utilities
-install direnv
+install ack
+#install direnv
 install heroku-toolbelt
 install picocom
 install pv
