@@ -23,7 +23,7 @@
 
 ;; In case we are in a GUI
 (when (display-graphic-p)
-  (set-face-attribute 'default nil :font "Inconsolata 12")
+  (set-face-attribute 'default nil :font "Source Code Pro 16")
   (load-theme 'solarized-light))
 
 ;; Better defaults (github.com/technomancy/betterdefaults)

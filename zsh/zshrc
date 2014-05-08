@@ -1,5 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 # Uncomment to change how often before auto-updates occur? (in days)
@@ -23,7 +25,7 @@ DOTFILES=$HOME/dotfiles
 
 # Which platform-independent plugins would you like to load?
 # Platform-dependent plugins are defined below
-plugins=(git svn-fast-info tmux bundler)
+plugins=(git svn-fast-info bundler rails)
 
 # Load platform-specific configurations (and oh-my-zsh plugins!)
 source $DOTFILES/zsh/os.zsh
@@ -65,9 +67,14 @@ export EDITOR=$VIM
 # Use FredKSchott's color git log from fredkschott.com/post/2014/02/git-log-is-so-2005/
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
+# Go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin # osx only?
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# Add bin in home directory
+export PATH=$HOME/bin:$PATH
+
 # Remove duplicates from PATH, etc.
 typeset -U PATH
 typeset -U MANPATH
-
-## direnv (adds ./bin/ dir to PATH, e.g. in rails project dirs)
-#eval "$(direnv hook zsh)"

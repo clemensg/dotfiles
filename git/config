@@ -9,35 +9,58 @@
 [core]
   excludesfile = ~/.gitignore
   #editor = vim
-
 [credential]
   helper = osxkeychain
-
 [alias]
+  st = status
+  ci = commit --verbose
   co = checkout
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  di = diff
+  dc = diff --cached
+  amend = commit --amend
+  aa = add --all
+  mergeff = merge --ff-only
+  pullff = pull --ff-only
+  mergenoff = merge --no-ff
+  fa = fetch --all
+  pom = push origin master
+  b = branch
+  dh1 = diff HEAD~1
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 
+  # Goodness (summary of diff lines added/removed/total)
+  gn = !~/bin/git-goodness
+  gnc = !~/bin/git-goodness --cached
+
+  # Fancy logging.
+  #  h = head
+  #  hp = head with patch
+  #  r = recent commits, only current branch
+  #  ra = recent commits, all reachable refs
+  #  l = all commits, only current branch
+  #  la = all commits, all reachable refs
+  head = !git l -1
+  h = !git head
+  hp = "!. ~/.githelpers && show_git_head"
+  r = !git l -30
+  ra = !git r --all
+  l = "!. ~/.githelpers && pretty_git_log"
+  la = !git l --all
 [color]
-  ui = true
+  ui = auto
   diff = auto
   status = auto
   branch = auto
-
 [push]
   default = simple
   # simple will soon be the default mechanism (in Git 2.0)
-
 [help]
   autocorrect = 1
-
 [hub]
   protocol = https
-
 #[apply]
 #  whitespace = nowarn
-
 #[mergetool]
 #  keepBackup = false
-
 #[difftool]
 #  prompt = false
