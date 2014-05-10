@@ -42,6 +42,7 @@ ln -s $(pwd)/ackrc $HOME/.ackrc
 ln -s $(pwd)/gdbrc $HOME/.gdbrc
 ln -s $(pwd)/gemrc $HOME/.gemrc
 ln -s $(pwd)/irbrc $HOME/.irbrc
+ln -s $(pwd)/pryrc $HOME/.pryrc
 ln -s $(pwd)/psqlrc $HOME/.psqlrc
 ln -s $(pwd)/sqliterc $HOME/.sqliterc
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
