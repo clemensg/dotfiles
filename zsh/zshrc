@@ -28,7 +28,7 @@ DOTFILES=$HOME/dotfiles
 plugins=(git svn-fast-info bundler rails)
 
 # Load platform-specific configurations (and oh-my-zsh plugins!)
-source $DOTFILES/zsh/os.zsh
+source "$DOTFILES/zsh/os.zsh"
 
 # Add zsh-syntax-highlighting last
 plugins+=(zsh-syntax-highlighting)
@@ -37,7 +37,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 typeset -U plugins
 
 # Load oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 # Set necessary env vars for Cocoapods and Homebrew
 export LC_CTYPE="en_US.UTF-8"
@@ -46,34 +46,34 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # RVM
 if [[ -d "$HOME/.rvm" ]]; then
-  PATH=$PATH:$HOME/.rvm/bin
+  PATH="$PATH:$HOME/.rvm/bin"
 fi
 
 # Set $EMACS variable to launch emacsclient with a daemon
-source $DOTFILES/zsh/emacsclient.zsh
+source "$DOTFILES/zsh/emacsclient.zsh"
  
 # Aliases
-alias e=$EMACS
-alias v=$VIM
+alias e="$EMACS"
+alias v="$VIM"
 alias dr="$DOTFILES/scripts/daily_routine.sh"
 
 # Reminders if not using the shorthand alias
-alias emacs='echo "Hey, why not type e instead of emacs?"; $EMACS'
-alias vim='echo "Hey, why not type v instead of vim?"; $VIM'
+alias emacs="echo \"Hey, why not type e instead of emacs?\"; $EMACS"
+alias vim="echo \"Hey, why not type v instead of vim?\"; $VIM"
 
 # Default editor
-export EDITOR=$VIM
+export EDITOR="$VIM"
 
 # Use FredKSchott's color git log from fredkschott.com/post/2014/02/git-log-is-so-2005/
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Go
-export PATH=$PATH:/usr/local/opt/go/libexec/bin # osx only?
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH="$PATH:/usr/local/opt/go/libexec/bin" # osx only?
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
 
 # Add bin in home directory
-export PATH=$HOME/bin:$PATH
+export PATH="$HOME/bin:$PATH"
 
 # Remove duplicates from PATH, etc.
 typeset -U PATH
