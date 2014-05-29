@@ -15,7 +15,7 @@
 (package-initialize)
 ;; My packages
 (setq my-required-packages
-      (list 'inf-ruby 'magit 'rvm 'solarized-theme))
+      (list 'clojure-mode 'inf-ruby 'magit 'rvm 'sass-mode 'slim-mode 'solarized-theme))
 (dolist (package my-required-packages)
   (when (not (package-installed-p package))
     (package-refresh-contents)
