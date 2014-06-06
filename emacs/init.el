@@ -1,12 +1,27 @@
 ;;; init.el --- Emacs config
 ;;;
 ;;; Commentary:
-;;;  Clemens Gruber, 2013
+;;;  Clemens Gruber, 2014
 ;;;
 
 ;;; Nota bene:
 ;;;  No need to call (server-start)
 ;;;  Server setup takes place elsewhere (zsh)
+
+;; Theme whitelist
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+ '(safe-local-variable-values (quote ((encoding . utf-8)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 ;; Package management
 (require 'package)
@@ -109,21 +124,3 @@
 
 ;; Disable SCSS auto compiling
 (setq scss-compile-at-save nil)
-
-
-;;
-;; DO NOT EDIT ANYTHING BELOW HERE!
-;;
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
- '(safe-local-variable-values (quote ((encoding . utf-8)))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
