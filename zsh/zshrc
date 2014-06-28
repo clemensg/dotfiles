@@ -25,7 +25,7 @@ DOTFILES=$HOME/dotfiles
 
 # Which platform-independent plugins would you like to load?
 # Platform-dependent plugins are defined below
-plugins=(git svn-fast-info bundler rails)
+plugins=(git svn-fast-info bundler rails tmux)
 
 # Load platform-specific configurations (and oh-my-zsh plugins!)
 source "$DOTFILES/zsh/os.zsh"
