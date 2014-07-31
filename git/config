@@ -6,7 +6,7 @@
   aa = add --all
   amend = commit --amend
   b = branch
-  ci = commit --verbose
+  ci = commit -s --verbose
   co = checkout
   cp = cherry-pick
   dc = diff --cached
@@ -59,9 +59,9 @@
   textconv = tar -tvf
 [grep]
   extendedregexp = true
-[help]
-  autocorrect = 30
-  format = web
+#[help]
+#  autocorrect = 30
+#  format = web
 [hub]
   protocol = https
 #[rebase]
@@ -73,6 +73,6 @@
   # simple will soon be the default mechanism (in Git 2.0)
 [user]
   name = Clemens Gruber
-  email = clemensgru@gmail.com
+	email = clemens.gruber@pqgruber.com
 [web]
   browser = open
