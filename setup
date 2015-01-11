@@ -1,0 +1,52 @@
+#!/bin/bash
+# Clemens Gruber, 2015
+# Config setup
+#
+
+echo -n "Initializing config dirs and linking files... "
+
+# Create directories
+mkdir -p $HOME/.history $HOME/bin
+# Link bin dir contents
+ln -s -f $(pwd)/bin/* $HOME/bin/
+
+# Git
+ln -s -f $(pwd)/git/config $HOME/.gitconfig
+ln -s -f $(pwd)/git/ignore $HOME/.gitignore
+
+# Install RVM
+#curl -L https://get.rvm.io | bash -s stable
+
+# ZSH
+ln -s -f $(pwd)/zshrc $HOME/.zshrc
+
+# Emacs
+ln -s -f $(pwd)/emacs $HOME/.emacs.d
+mkdir -p $HOME/.emacs.d/backups
+
+# Vim
+ln -s -f $(pwd)/vimrc $HOME/.vimrc
+mkdir -p $HOME/.vim/backup
+
+# Xorg and awesome
+mkdir -p $HOME/.config/awesome
+ln -s -f $(pwd)/awesome/rc.lua $HOME/.config/awesome/
+ln -s -f $(pwd)/xinitrc $HOME/.xinitrc
+
+# SSH
+mkdir -p $HOME/.ssh
+if [ ! -f $HOME/.ssh/config ]; then
+    cp $(pwd)/ssh_config_default $HOME/.ssh/config
+fi
+
+# Others
+ln -s -f $(pwd)/ackrc $HOME/.ackrc
+ln -s -f $(pwd)/gdbinit $HOME/.gdbinit
+ln -s -f $(pwd)/irbrc $HOME/.irbrc
+ln -s -f $(pwd)/pryrc $HOME/.pryrc
+ln -s -f $(pwd)/psqlrc $HOME/.psqlrc
+ln -s -f $(pwd)/sqliterc $HOME/.sqliterc
+ln -s -f $(pwd)/tmux.conf $HOME/.tmux.conf
+ln -s -f $(pwd)/valgrindrc $HOME/.valgrindrc
+
+echo "OK"

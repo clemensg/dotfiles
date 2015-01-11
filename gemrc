@@ -1,4 +1,0 @@
-gem:
-        --no-rdoc --no-ri
-benchmark:
-        falsegemsrc_clone_root: ~/src

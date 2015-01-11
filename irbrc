@@ -10,7 +10,3 @@ IRB.conf[:HISTORY_FILE] = if defined?(Bundler)
   else
     File.expand_path("~/.history/irb")
   end
-
-# Just call ap to pretty print in irb
-require "awesome_print"
-AwesomePrint.irb!
