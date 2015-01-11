@@ -1,4 +1,3 @@
 ### Config files
 
-Works on Linux and Mac OS X.
-
+Works on Linux and for the most part also on Mac OS X.
