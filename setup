@@ -14,9 +14,6 @@ ln -s -f $(pwd)/bin/* $HOME/bin/
 ln -s -f $(pwd)/git/config $HOME/.gitconfig
 ln -s -f $(pwd)/git/ignore $HOME/.gitignore
 
-# Install RVM
-#curl -L https://get.rvm.io | bash -s stable
-
 # ZSH
 ln -s -f $(pwd)/zshrc $HOME/.zshrc
 
@@ -30,8 +27,15 @@ mkdir -p $HOME/.vim/backup
 
 # Xorg and awesome
 mkdir -p $HOME/.config/awesome
-ln -s -f $(pwd)/awesome/rc.lua $HOME/.config/awesome/
-ln -s -f $(pwd)/xinitrc $HOME/.xinitrc
+if [ -d "/sys/class/power_supply/BAT0" ]; then
+    # Mobile
+    ln -s -f $(pwd)/awesome/mobile.rc.lua $HOME/.config/awesome/rc.lua
+    ln -s -f $(pwd)/xinitrc-mobile $HOME/.xinitrc
+else
+    # Desktop
+    ln -s -f $(pwd)/awesome/rc.lua $HOME/.config/awesome/rc.lua
+    ln -s -f $(pwd)/xinitrc $HOME/.xinitrc
+fi
 
 # SSH
 mkdir -p $HOME/.ssh

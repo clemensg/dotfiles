@@ -17,8 +17,8 @@ hlcolor = "#d7e0ea"
 vicious = require("vicious")
 datewidget = wibox.widget.textbox()
 vicious.register(datewidget, vicious.widgets.date, " %b %d, %R ", 30)
---batterywidget = wibox.widget.textbox()
---vicious.register(batterywidget, vicious.widgets.bat, " Bat. <span color='" .. hlcolor .. "'>$1$2</span>  | ", 31, "BAT0")
+batterywidget = wibox.widget.textbox()
+vicious.register(batterywidget, vicious.widgets.bat, " Bat. <span color='" .. hlcolor .. "'>$1$2</span>  | ", 31, "BAT0")
 
 
 -- {{{ Error handling
@@ -205,7 +205,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
-    --right_layout:add(batterywidget)
+    right_layout:add(batterywidget)
     right_layout:add(datewidget)
     right_layout:add(mylayoutbox[s])
 
