@@ -25,7 +25,7 @@
   gnc = !~/bin/git-goodness --cached
 [core]
   excludesfile = ~/.gitignore
-  #editor = vim
+  editor = vim
 [color]
   ui = auto
   diff = auto

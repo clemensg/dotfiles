@@ -10,3 +10,8 @@ zstyle :compinstall filename '/home/clemens/.zshrc'
 
 autoload -Uz compinit
 compinit
+
+export EDITOR=vim
+
+export PATH=$HOME/bin:$PATH
+typeset -U PATH
