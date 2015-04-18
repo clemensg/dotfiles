@@ -45,7 +45,9 @@ fi
 
 # Others
 ln -s -f $(pwd)/ackrc $HOME/.ackrc
+ln -s -f $(pwd)/agignore $HOME/.agignore
 ln -s -f $(pwd)/gdbinit $HOME/.gdbinit
+ln -s -f $(pwd)/gemrc $HOME/.gemrc
 ln -s -f $(pwd)/irbrc $HOME/.irbrc
 ln -s -f $(pwd)/pryrc $HOME/.pryrc
 ln -s -f $(pwd)/psqlrc $HOME/.psqlrc
