@@ -1,8 +1,0 @@
---sort-files
-
---type-add=ruby=rake
---type-add=vim=vimrc
---type-add=js=json
-
---type-set=MARKDOWN=md,mkd,markdown
---type-set=RDOC=rdoc

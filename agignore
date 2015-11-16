@@ -1,5 +1,7 @@
 log
-tags
-tmp
 vendor
-.git/
+tmp
+doc
+public/assets
+*.sql
+/.git/

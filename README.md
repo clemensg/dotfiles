@@ -1,3 +1,5 @@
 ### Config files
 
-Works on Linux and for the most part also on Mac OS X.
+I am using these dotfiles on Linux and Mac OS X.
+
+Have fun!

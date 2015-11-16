@@ -6,36 +6,20 @@
 echo -n "Initializing config dirs and linking files... "
 
 # Create directories
-mkdir -p $HOME/.history $HOME/bin
-# Link bin dir contents
-ln -s -f $(pwd)/bin/* $HOME/bin/
+mkdir -p $HOME/.history
 
 # Git
-ln -s -f $(pwd)/git/config $HOME/.gitconfig
-ln -s -f $(pwd)/git/ignore $HOME/.gitignore
+ln -s -f $(pwd)/gitconfig $HOME/.gitconfig
+ln -s -f $(pwd)/gitignore $HOME/.gitignore
 
 # ZSH
 ln -s -f $(pwd)/zshrc $HOME/.zshrc
 
 # Emacs
-ln -s -f $(pwd)/emacs $HOME/.emacs.d
-mkdir -p $HOME/.emacs.d/backups
+ln -s -f $(pwd)/emacs $HOME/.emacs
 
 # Vim
 ln -s -f $(pwd)/vimrc $HOME/.vimrc
-mkdir -p $HOME/.vim/backup
-
-# Xorg and awesome
-mkdir -p $HOME/.config/awesome
-if [ -d "/sys/class/power_supply/BAT0" ]; then
-    # Mobile
-    ln -s -f $(pwd)/awesome/mobile.rc.lua $HOME/.config/awesome/rc.lua
-    ln -s -f $(pwd)/xinitrc-mobile $HOME/.xinitrc
-else
-    # Desktop
-    ln -s -f $(pwd)/awesome/rc.lua $HOME/.config/awesome/rc.lua
-    ln -s -f $(pwd)/xinitrc $HOME/.xinitrc
-fi
 
 # SSH
 mkdir -p $HOME/.ssh
@@ -43,16 +27,19 @@ if [ ! -f $HOME/.ssh/config ]; then
     cp $(pwd)/ssh_config_default $HOME/.ssh/config
 fi
 
+# tmux
+ln -s -f $(pwd)/tmux.conf $HOME/.tmux.conf
+if [ "$(uname)" == "Darwin" ]; then
+  ln -s -f $(pwd)/tmux-osx.conf $HOME/.tmux-osx.conf
+fi
+
 # Others
-ln -s -f $(pwd)/ackrc $HOME/.ackrc
 ln -s -f $(pwd)/agignore $HOME/.agignore
 ln -s -f $(pwd)/gdbinit $HOME/.gdbinit
 ln -s -f $(pwd)/gemrc $HOME/.gemrc
 ln -s -f $(pwd)/irbrc $HOME/.irbrc
-ln -s -f $(pwd)/pryrc $HOME/.pryrc
 ln -s -f $(pwd)/psqlrc $HOME/.psqlrc
 ln -s -f $(pwd)/sqliterc $HOME/.sqliterc
-ln -s -f $(pwd)/tmux.conf $HOME/.tmux.conf
 ln -s -f $(pwd)/valgrindrc $HOME/.valgrindrc
 
 echo "OK"

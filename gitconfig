@@ -1,0 +1,54 @@
+# .gitconfig
+# Clemens Gruber, 2015
+#
+
+[alias]
+  aa = add --all
+  amend = commit --amend
+  b = branch
+  ci = commit -s --verbose
+  co = checkout
+  cp = cherry-pick
+  dc = diff --cached
+  dh = diff HEAD
+  dh1 = diff HEAD~1
+  di = diff
+  fa = fetch --all
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  mergeff = merge --ff-only
+  mergenoff = merge --no-ff
+  pom = push origin master
+  pullff = pull --ff-only
+  st = status
+[apply]
+  whitespace = nowarn
+[branch]
+  # autosetupmerge = true    # ?
+  # autosetuprebase = always # ?
+[color]
+  ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim --noplugin
+[github]
+  user = clemensg
+[grep]
+  extendedregexp = true
+[help]
+  autocorrect = 1
+[hub]
+  protocol = https
+[log]
+  decorate = short
+[merge]
+  ff = only
+[push]
+  default = simple
+[user]
+  name = Clemens Gruber
+  email = clemensgru@gmail.com
+[web]
+  browser = open
